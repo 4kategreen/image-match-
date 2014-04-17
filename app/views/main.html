@@ -24,15 +24,18 @@
 <div class="main row" ng-ctrl="mainCtrl">
   <div class="col-md-9">
     <div class="pictures row">
-      <div class="pictures__item col-md-4 text-center" ng-repeat="picture in pictures">
+      <div class="pictures__item col-md-4 text-center" ng-repeat="pic in matches">
         <img src="images/yeoman.png">
-        <h4>{{picture}}</h4>
+        <h4>{{pic.picture}}</h4>
+        <div class="well" index="{{$index}}" lvl-drop-target="true" on-drop="makeMatch(dragEl,dropEl)"></div>
       </div>
     </div>
   </div>
   <div class="col-md-3">
     <ul class="players nav nav-pills nav-stacked">
-      <li class="players__player ng-repeat="player in players"><a href="#">{{player}}</a></li>
+      <li class="players__player" ng-repeat="player in players">
+        <a class="btn btn-info" href="#" lvl-draggable="true">{{player}}</a>
+      </li>
     </ul>
   </div>
 </div>

@@ -4,7 +4,8 @@ angular.module('babiesApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'lvl.directives.dragdrop'
 ])
   .config(function ($routeProvider) {
     $routeProvider
