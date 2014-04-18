@@ -24,6 +24,28 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Baby Picture Contest</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="nav navbar-nav navbar-right" ng-controller="TabsCtrl">
+            <li ng-repeat="tab in tabs" heading="{{tab.title}}" ng-class="getClass(tab.route)"><a href="#{{tab.route}}">{{tab.title}}</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
     <!-- Add your site or application content here -->
     <div class="container" ng-view=""></div>
 
@@ -60,6 +82,8 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/services/auth.js"></script>
+        <script src="scripts/controllers/signup.js"></script>
+        <script src="scripts/controllers/tabs.js"></script>
         <!-- endbuild -->
 
     <script src="https://cdn.firebase.com/js/client/1.0.11/firebase.js"></script>

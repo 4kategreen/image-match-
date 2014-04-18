@@ -12,9 +12,13 @@ angular.module('babiesApp', [
   .constant('USERS', 370373795)
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/vote', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
+      })
+      .when('/', {
+        templateUrl: 'views/signup.html',
+        controller: 'SignupCtrl'
       })
       .otherwise({
         redirectTo: '/'
